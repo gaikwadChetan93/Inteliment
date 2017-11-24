@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch">
+<LinearLayout
+    style="@style/MatchMatch"
+    android:divider="?android:listDivider"
+    android:dividerPadding="5dp"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:layout_margin="10dp"
+    tools:context="com.inteliment.intelimentviewwizard.scenario1.DashboardActivity">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_item"
+        style="@style/ElementStype"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        style="@style/ElementStype"/>
+
+    <LinearLayout
+        style="@style/ElementStype"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            style="@style/WrapWrap"
+            android:text="TextView1"
+            />
+        <TextView
+            style="@style/WrapWrap"
+            android:layout_gravity="center_horizontal"
+            android:text="TextView2"
+            />
+        <TextView
+            style="@style/WrapWrap"
+            android:layout_gravity="end"
+            android:text="TextView3"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        style="@style/ElementStype"
+        >
+        <TextView
+            android:id="@+id/tvSelectedItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/not_selected"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_container"
+        style="@style/ElementStype"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btnRed"
+            style="@style/WrapWrap"
+            android:text="@string/red_btn"
+            />
+        <Button
+            android:id="@+id/btnGreen"
+            style="@style/WrapWrap"
+            android:text="@string/green_btn"
+            />
+        <Button
+            android:id="@+id/btnBlue"
+            style="@style/WrapWrap"
+            android:text="@string/blue_btn"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

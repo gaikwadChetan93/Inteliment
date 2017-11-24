@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.inteliment.intelimentviewwizard"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        buildTypes {
+            debug {
+                buildConfigField "String", "BASE_URL", "\"http://express-it.optusnet.com.au/\""
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                applicationIdSuffix ".debug"
+            }
+            release {
+                buildConfigField "String", "BASE_URL", "\"http://express-it.optusnet.com.au/\""
+                minifyEnabled true
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+    project.ext {
+        supportLibraryVersion = "25.3.1"
+        retrofitVersion = "2.1.0"
+        butterkniftVersion = "8.1.0"
+        daggerVersion = "2.5"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Design
+    compile "com.android.support:appcompat-v7:$project.supportLibraryVersion"
+    compile "com.android.support:support-v4:$project.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$project.supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$project.supportLibraryVersion"
+
+    //Networking
+    compile "com.squareup.retrofit2:retrofit:$project.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$project.retrofitVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava:$project.retrofitVersion"
+
+    //View binding
+    apt "com.jakewharton:butterknife-compiler:$project.butterkniftVersion"
+    compile "com.jakewharton:butterknife:$project.butterkniftVersion"
+
+    //Reactive programming
+
+    //Dagger and DI
+    apt "com.google.dagger:dagger-compiler:$project.daggerVersion"
+    compile "com.google.dagger:dagger:$project.daggerVersion"
+
+    //Espresso
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.0') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude module: 'recyclerview-v7'
+    }
+
+    compile 'com.github.ronaldsmartin:Material-ViewPagerIndicator:1.0.4'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support:support-annotations:25.3.1'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+}

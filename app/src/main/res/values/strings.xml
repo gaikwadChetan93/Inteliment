@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">IntelimentViewWizard</string>
+    <string name="not_selected">Not selected</string>
+    <string name="red_btn">redBtn</string>
+    <string name="green_btn">btnGreen</string>
+    <string name="blue_btn">btnBlue</string>
+    <string name="navigate">Navigate</string>
+    <string name="mode_of_transport">Mode of transport</string>
+    <string name="error_no_maps">Maps not installed</string>
+    <string name="direction_uri">geo:%1$f,%2$f?q=%1$f,%2$f</string>
+    <string name="msg_car">Car - %1$s</string>
+    <string name="msg_train">Train - %1$s</string>
+    <string name="scenario2">Scenario2</string>
+    <string-array name="items">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+    </string-array>
+</resources>
