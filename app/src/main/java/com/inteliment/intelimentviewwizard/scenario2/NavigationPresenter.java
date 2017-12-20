@@ -11,7 +11,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by chetan_g on 23/11/17.
+ * Created by chetan on 23/11/17.
  */
 
 class NavigationPresenter {
