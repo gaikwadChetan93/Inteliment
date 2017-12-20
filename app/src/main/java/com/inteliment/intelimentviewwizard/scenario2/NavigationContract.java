@@ -5,7 +5,7 @@ import com.inteliment.intelimentviewwizard.models.LocationInfo;
 import java.util.List;
 
 /**
- * Created by chetan_g on 23/11/17.
+ * Created by chetan on 23/11/17.
  */
 
 interface NavigationContract {
