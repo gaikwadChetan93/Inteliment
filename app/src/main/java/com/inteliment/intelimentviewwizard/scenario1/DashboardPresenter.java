@@ -5,7 +5,7 @@ import com.inteliment.intelimentviewwizard.R;
 import java.util.Arrays;
 
 /**
- * Created by chetan_g on 23/11/17.
+ * Created by chetan on 23/11/17.
  */
 
 class DashboardPresenter {
