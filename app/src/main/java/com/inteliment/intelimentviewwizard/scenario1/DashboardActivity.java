@@ -72,6 +72,7 @@ public class DashboardActivity extends AppCompatActivity implements DashboardCon
                 return super.onOptionsItemSelected(item);
         }
     }
+    
     /**
      * Initialize viewpager
      */
@@ -106,7 +107,6 @@ public class DashboardActivity extends AppCompatActivity implements DashboardCon
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         mTripList.setLayoutManager(layoutManager);
     }
-
 
     /**
      * Inflate recyclerview
@@ -148,6 +148,7 @@ public class DashboardActivity extends AppCompatActivity implements DashboardCon
                 break;
         }
     }
+    
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
